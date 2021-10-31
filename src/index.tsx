@@ -38,7 +38,7 @@ export const Footer: FC<Props> = ({}) => {
           ))}
         </div>
         <p className="mt-8 text-center text-base text-gray-400">
-          &copy; {new Date().getFullYear()} Amadeus Mader.
+          &copy; <span id="JEST-TEST-YEAR">{new Date().getFullYear()}</span> Amadeus Mader.
         </p>
       </div>
     </footer>
