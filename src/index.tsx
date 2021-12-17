@@ -8,17 +8,17 @@ export interface Props extends HTMLAttributes<HTMLDivElement> {
 
 export const Footer: FC<Props> = ({}) => {
   return (
-    <footer className="bg-white">
+    <footer className="bg-white dark:bg-gray-800">
       <div className="max-w-7xl mx-auto py-12 px-4 overflow-hidden sm:px-6 lg:px-8">
         <nav
           className="-mx-5 -my-2 flex flex-wrap justify-center"
           aria-label="Footer"
         >
-          {FooterLinks.main.map(item => (
+          {FooterLinks.main.map((item) => (
             <div key={item.name} className="px-5 py-2">
               <a
                 href={item.href}
-                className="text-base text-gray-500 hover:text-gray-900"
+                className="text-base text-gray-500 hover:text-gray-900 dark:text-gray-200"
               >
                 {item.name}
               </a>
@@ -26,7 +26,7 @@ export const Footer: FC<Props> = ({}) => {
           ))}
         </nav>
         <div className="mt-8 flex justify-center space-x-6">
-          {FooterLinks.social.map(item => (
+          {FooterLinks.social.map((item) => (
             <a
               key={item.name}
               href={item.href}
@@ -38,7 +38,8 @@ export const Footer: FC<Props> = ({}) => {
           ))}
         </div>
         <p className="mt-8 text-center text-base text-gray-400">
-          &copy; <span id="JEST-TEST-YEAR">{new Date().getFullYear()}</span> Amadeus Mader.
+          &copy; <span id="JEST-TEST-YEAR">{new Date().getFullYear()}</span>{' '}
+          Amadeus Mader.
         </p>
       </div>
     </footer>
